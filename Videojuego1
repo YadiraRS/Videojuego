@@ -1,0 +1,1078 @@
+int x1=260, y1=230, a1=30, b1=30;
+int x2=620, y2=230, a2=30, b2=30;
+int x3=960, y3=230, a3=30, b3=30;
+int x4=260, y4=600, a4=30, b4=30;
+int x5=620, y5=600, a5=30, b5=30;
+int x6=960, y6=600, a6=30, b6=30;
+int value1=255, value2=#EBDEF7, value3=#FAF8E8, value4=#9BDBAA, value5=#CDDEF2, value6=#F58A8A;
+int ventana=0;
+int contador=0;
+int m1=0;
+int m2=0;
+int m3=0;
+int m4=0;
+int m5=0;
+int m6=0;
+
+int l=1;
+
+Star[] stars = new Star[800];
+void setup()
+{
+ 
+  size (1000,800);
+ for (int i=0; i<stars.length; i++){
+    stars[i] = new Star();
+  }
+
+}
+
+void draw (){
+ size(1000,800);  
+  pantalla();
+   personajes();
+   switch(ventana){
+     
+     case 2:
+     
+     //P1 CAMI
+    
+    if( (m1==1)&(m2==1) ){
+      print("aviso");
+     background(255);
+     translate(60,140); 
+     scale(1.2, 1.2);
+     CAMI();
+    translate(80,-5); 
+     scale(1, 1);
+     YELL();
+    }
+     
+    
+    if( (m1==1)&(m3==1) ){
+      
+     background(0);
+     translate(60,140); 
+     scale(1.2, 1.2);
+     CAMI();
+    translate(-250,-5); 
+     scale(1, 1);
+     BLUU();
+   }
+  
+     if( (m1==1)&(m4==1) ){
+      
+     background(0);
+     translate(60,140); 
+     scale(1.2, 1.2);
+     CAMI();
+    translate(400,-390); 
+     scale(1, 1);
+     PURP();
+   }
+   
+     if( (m1==1)&(m5==1) ){
+      
+     background(0);
+       translate(60,140); 
+     scale(1.2, 1.2);
+     CAMI();
+   translate(80,-380);  
+     scale(1, 1);
+     BOB();
+    
+   }
+
+    if( (m1==1)&(m6==1) ){
+      
+    background(0);
+       translate(60,140); 
+     scale(1.2, 1.2);
+     CAMI();
+  translate(-250,-380); 
+     scale(1, 1);
+     SAM();
+   }
+   
+   //P2 YELL
+ 
+     if( (m2==1)&(m1==1) ){
+      
+     background(0);
+      translate(-500,-5); 
+     scale(1.2, 1.2);
+     YELL();
+  translate(700,-5); 
+     scale(1, 1);
+     CAMI();
+   }
+ 
+      if( (m2==1)&(m3==1) ){
+      
+     background(0);
+      translate(-400,150); 
+     scale(1.3, 1.3);
+     YELL();
+  translate(60,-5); 
+     scale(.97, .97);
+     BLUU();
+   }
+  
+      if( (m2==1)&(m4==1) ){
+     background(0);
+      translate(-400,150); 
+     scale(1.3, 1.3);
+     YELL();
+     translate(700,-360); 
+     scale(.97, .97);
+  
+     PURP();
+   }
+   
+     if( (m2==1)&(m5==1) ){
+     background(0);
+     translate(-400,150); 
+     scale(1.3, 1.3);
+     YELL();
+     translate(400,-360); 
+     scale(.97, .97);
+     BOB();
+   }
+   
+   if( (m2==1)&(m6==1) ){
+     background(0);
+     translate(-400,150); 
+     scale(1.3, 1.3);
+     YELL();
+     translate(90,-360); 
+     scale(.97, .97);
+     SAM();
+   }
+   //P3 BLUU
+   
+    if( (m3==1)&(m1==1) ){
+     background(0);
+     translate(-770,15); 
+     scale(1.3, 1.3);
+     BLUU();
+     translate(1100,-4); 
+     scale(.97, .97);
+     CAMI();
+   }
+   
+   
+     if( (m3==1)&(m2==1) ){
+     background(0);
+      translate(200,80); 
+     scale(1.3, 1.3);
+     YELL();
+  translate(-600,-2); 
+     scale(.97, .97);
+     BLUU();
+   }
+  
+    if( (m3==1)&(m4==1) ){
+     background(0);
+      translate(550,-220); 
+     scale(1.3, 1.3);
+    PURP();
+  translate(-1100,370); 
+     scale(.98, .98);
+     BLUU();
+   }
+   
+    if( (m3==1)&(m5==1) ){
+     background(0);
+      translate(100,-380);  
+     scale(1.3, 1.3);
+    BOB();
+    translate(-750,390); 
+     scale(1, 1);
+     BLUU();
+    }
+    
+     if( (m3==1)&(m6==1) ){
+       
+     background(0);
+   translate(-400, 100);
+   scale(1.2,1.2);
+    BLUU();
+    
+    translate(-200,-200); 
+     scale(.97, .97);
+     SAM();
+    }
+    
+    //P4 PURP
+   
+       if( (m4==1)&(m1==1) ){
+      
+     background(0);
+     translate(60,400); 
+     scale(1.2, 1.2);
+     CAMI();
+    translate(-400,-400); 
+     scale(1, 1);
+     PURP();
+   }
+    
+    
+     
+    if( (m4==1)&(m2==1) ){
+     background(0);
+      translate(-400,300); 
+     scale(1.3, 1.3);
+     YELL();
+     translate(70,-320); 
+     scale(.97, .97);
+  
+     PURP();
+   }
+
+      if( (m4==1)&(m3==1) ){
+        translate(70,-320); 
+     scale(.97, .97);
+  
+     PURP();
+ 
+   }
+  
+        if( (m4==1)&(m5==1) ){
+     background(0);
+      translate(100,-380);  
+     scale(1.3, 1.3);
+    BOB();
+
+        translate(-90,20); 
+     scale(.97, .97);
+        
+            
+       PURP();
+   }
+ 
+     if( (m4==1)&(m6==1) ){
+     background(0);
+     translate(-250,-380); 
+     scale(1.3, 1.3);
+     SAM();
+     
+       translate(180,20); 
+     scale(.97, .97);
+  
+     PURP();
+     }
+    //p5
+        if( (m5==1)&(m1==1) ){
+     background(0);
+      translate(-500,-100);  
+     scale(1.2, 1.2);
+    BOB();
+    
+    translate(600,400); 
+     scale(.97, .97);
+     CAMI();
+    
+        }  
+       
+         if( (m5==1)&(m6==1) ){
+     background(0);
+      translate(-300,-300);  
+     scale(1.2, 1.2);
+    BOB();
+    
+    translate(-50,-30); 
+     scale(.97, .97);
+     SAM();
+   }
+   break;
+     
+   }//cierre switch
+} //cierre DRAW
+
+class Star {
+float x;
+float y;
+float z;
+
+Star() {
+  x= random(-width, width);
+  y=random(-height, height);
+  z=random(width);
+ }
+ void update() {
+   z = z-4;
+  if(z < 1){
+  z = width;
+  x= random(-width, width);
+  y=random(-height, height);
+  }
+  
+ }
+   void show() {
+   fill(#34F0F5);
+   noStroke();
+ float sx = map(x/z, 0, 1, 0, width);
+  float sy = map(y/z, 0, 1, 0, height);
+  
+  float r = map(z,0,width,16,0);
+   ellipse(sx,sy,r,r);
+   
+  }
+} // cierre STAR
+
+void personajes(){
+  if(keyPressed){
+    if(key=='d'||key=='D'){
+      clear();
+      size(1000,800);
+    fill(#434243);
+   stroke(255);
+   
+      //personaje 1--------------------------------------------------------
+     
+  //carta 1
+    
+   fill(#434243);
+   stroke(255);
+   rect(50,5,200,300);
+   
+   //boton1
+    fill(#434243);
+   stroke(255);
+   rect(260,230,30,30);
+   
+       String n1="1";
+  fill(255);
+    textSize(15);
+    text(n1,270,235,20,20);
+   
+   
+   
+//NOMBRE------------   
+     String nombre1="CAMI";
+  fill(255);
+    textSize(30);
+    text(nombre1,105,200,600,100);
+    
+   String AT1="ATAQUE: 9";
+  fill(255);
+    textSize(15);
+    text(AT1,70,235,600,100);
+    
+   String VID1="VIDAS: 20";
+  fill(255);
+    textSize(15);
+    text(VID1,70,250,600,100);
+    
+  CAMI();
+  
+//personaje 2----------------------------------------------------------
+
+  //carta 2 
+  
+   fill(#434243);
+   stroke(255);
+   rect(400,5,200,300);
+   
+     //boton2
+    fill(#434243);
+   stroke(255);
+   rect(620,230,30,30);
+   
+       String n2="2";
+  fill(255);
+    textSize(15);
+    text(n2,630,235,20,20);
+   
+   
+   //NOMBRE
+        String nombre2="YELL";
+  fill(255);
+    textSize(30);
+    text(nombre2,465,200,600,100);
+    
+   String AT2="ATAQUE: 6";
+  fill(255);
+    textSize(15);
+    text(AT2,420,235,600,100);
+    
+   String VID2="VIDAS: 12";
+  fill(255);
+    textSize(15);
+    text(VID2,420,250,600,100);
+   
+   YELL();
+ 
+  //personaje 3-------------------------------------------------------
+  
+    //carta 3 
+  
+   fill(#434243);
+   stroke(255);
+   rect(750,5,200,300);
+       //boton3
+    fill(#434243);
+   stroke(255);
+   rect(960,230,30,30);
+   
+       String n3="3";
+  fill(255);
+    textSize(15);
+    text(n3,970,235,20,20);
+   
+   //NOMBRE
+        String nombre3="BLUU";
+  fill(255);
+    textSize(30);
+    text(nombre3,800,200,600,100);
+    
+   String AT3="ATAQUE: 8";
+  fill(255);
+    textSize(15);
+    text(AT3,760,235,600,100);
+    
+   String VID3="VIDAS: 15";
+  fill(255);
+    textSize(15);
+    text(VID3,760,250,600,100);
+    
+    BLUU();
+   
+  
+//personaje 4--------------------------------------------------------
+
+  
+  //carta 4 
+  
+   fill(#434243);
+   stroke(255);
+   rect(50,370,200,300);
+   
+   //boton4
+    fill(#434243);
+   stroke(255);
+   rect(260,600,30,30);
+   
+       String n4="4";
+  fill(255);
+    textSize(15);
+    text(n4,270,605,20,20);
+   
+   
+   //NOMBRE------------   
+     String nombre4="PURP";
+  fill(255);
+    textSize(30);
+    text(nombre4,105,590,600,100);
+    
+   String AT4="ATAQUE: 5";
+  fill(255);
+    textSize(15);
+    text(AT4,70,620,600,100);
+    
+   String VID4="VIDAS: 8";
+  fill(255);
+    textSize(15);
+    text(VID4,70,640,600,100);
+    
+    PURP();
+   
+  
+
+//personaje 5--------------------------------------------------------
+
+//carta 2 
+  
+   fill(#434243);
+   stroke(255);
+   rect(400,370,200,300);
+   
+        //boton5
+    fill(#434243);
+   stroke(255);
+   rect(620,600,30,30);
+   
+       String n5="5";
+  fill(255);
+    textSize(15);
+    text(n5,630,605,20,20);
+   
+    //NOMBRE
+        String nombre5="BOB";
+  fill(255);
+    textSize(30);
+    text(nombre5,465,590,600,100);
+    
+   String AT5="ATAQUE: 10";
+  fill(255);
+    textSize(15);
+    text(AT5,420,620,600,100);
+    
+   String VID5="VIDAS: 16";
+  fill(255);
+    textSize(15);
+    text(VID5,420,640,600,100);
+   
+   BOB();
+  
+  
+//personaje 6--------------------------------------------------------
+
+    //carta 6 
+  
+   fill(#434243);
+   stroke(255);
+   rect(750,370,200,300);
+
+       //boton6
+    fill(#434243);
+   stroke(255);
+   rect(960,600,30,30);
+   
+       String n6="6";
+  fill(255);
+    textSize(15);
+    text(n6,970,605,20,20);
+
+
+//NOMBRE
+        String nombre6="SAM";
+  fill(255);
+    textSize(30);
+    text(nombre6,820,590,600,100);
+    
+   String AT6="ATAQUE: 16";
+  fill(255);
+    textSize(15);
+    text(AT6,760,620,600,100);
+    
+   String VID6="VIDAS: 30";
+  fill(255);
+    textSize(15);
+    text(VID6,760,640,600,100);
+
+ SAM();
+//----------------------------
+l=l+1;
+
+
+String instrucciones2="PRESIONA LOS NÚMEROS DE LOS MOUNSTRUOS QUE DESEAS QUE SE ENFRENTEN";
+  
+  textSize(14);
+  fill(#A15DC4);
+  text(instrucciones2,250,340,500,400);
+  }
+}
+}
+//------------------------------------------------------------------------------------
+void mouseClicked(){
+  //Cuadro1//
+  if((mouseX>=260)&(mouseX<=290)&(mouseY>=230)&(mouseY<=260)){
+  rectangulo1(x1,y1,a1,b1);
+  m1=1;
+  }  //cierre del IF 
+  //Cuadro2//
+  if((mouseX>=620)&(mouseX<=650)&(mouseY>=230)&(mouseY<=260)){
+  rectangulo2(x2,y2,a2,b2);
+  m2=1;
+  }  //cierre del IF 
+  //Cuadro3//
+  if((mouseX>=960)&(mouseX<=990)&(mouseY>=230)&(mouseY<=260)){
+  rectangulo3(x3,y3,a3,b3);
+  m3=1;
+  }  //cierre del IF 
+   //Cuadro4//
+  if((mouseX>=260)&(mouseX<=290)&(mouseY>=600)&(mouseY<=630)){
+  rectangulo4(x4,y4,a4,b4);
+  m4=1;
+  }  //cierre del IF 
+  //Cuadro5//
+  if((mouseX>=620)&(mouseX<=650)&(mouseY>=600)&(mouseY<=630)){
+  rectangulo5(x5,y5,a5,b5);
+  m5=1;
+  }  //cierre del IF 
+  //Cuadro6//
+  if((mouseX>=960)&(mouseX<=990)&(mouseY>=600)&(mouseY<=630)){
+  rectangulo6(x6,y6,a6,b6);
+  m6=1;
+  }  //cierre del IF 
+  
+}  //cierre del MOUSECLIC
+
+void rectangulo1(int x1,int y1,int a1,int b1){
+  if(contador<2){
+ if(value1==255){
+ value1=0;
+ ventana=ventana+1;
+ rect(x1,y1,a1,b1);
+ contador=contador+1;
+ print("Se le suma 1");
+ }//cierre del IF
+ else{
+ value1=255;
+ contador=contador-1;
+ ventana=ventana-1;
+ print("Se le resta 1");
+   }  //cierre del ELSE
+  } //cierre del IF CONTADOR
+  else if(contador==2){
+  if(value1==0){
+    value1=255;
+    ventana=ventana-1;
+    contador=contador-1;
+    }  //cierre IF value1
+  }  //cierre del ELSE-IF1
+}  //cierre del RECTANGULO1
+//RECTANGULO2//
+void rectangulo2(int x2,int y2,int a2,int b2){
+  if(contador<2){
+ if(value2==#EBDEF7){
+ value2=0;
+ ventana=ventana+1;
+ rect(x2,y2,a2,b2);
+ contador=contador+1;
+ print("Se le suma 1");
+ }//cierre del IF
+ else{
+ value2=(#EBDEF7);
+ ventana=ventana-1;
+ contador=contador-1;
+ print("Se le resta 1");
+   }  //cierre del ELSE
+  }  //cierre del  IF CONTADOR
+  else if(contador==2){
+  if(value2==0){
+    value2=(#EBDEF7);
+    ventana=ventana-1;
+    contador=contador-1;
+    }  //cierre IF value1
+  }  //cierre del ELSE-IF1
+}  //cierre del RECTANGULO2
+//RECTANGULO3//
+void rectangulo3(int x3,int y3,int a3,int b3){
+  if(contador<2){
+ if(value3==#FAF8E8){
+ value3=0;
+ ventana=ventana+1;
+ rect(x3,y3,a3,b3);
+ contador=contador+1;
+ print("Se le suma 1");
+ }//cierre del IF
+ else{
+ value3=#FAF8E8;
+ventana=ventana-1;
+ contador=contador-1;
+ print("Se le resta 1");
+   }  //cierre del ELSE
+  }  //cierre del IF CONTADOR
+  else if(contador==2){
+  if(value3==0){
+    value3=#FAF8E8;
+    ventana=ventana-1;
+    contador=contador-1;
+    }  //cierre IF value1
+  }  //cierre del ELSE-IF1
+}  //cierre del RECTANGULO3
+//RECTANGULO 4//
+void rectangulo4(int x4,int y4,int a4,int b4){
+  if(contador<2){
+ if(value4==#9BDBAA){
+ value4=0;
+ ventana=ventana+1;
+ rect(x4,y4,a4,b4);
+ contador=contador+1;
+ print("Se le suma 1");
+ }//cierre del IF
+ else{
+ value4=#9BDBAA;
+ventana=ventana-1;
+ contador=contador-1;
+ print("Se le resta 1");
+   }  //cierre del ELSE
+  } //cierre del IF CONTADOR
+  else if(contador==2){
+  if(value4==0){
+    value4=#9BDBAA;
+    ventana=ventana-1;
+    contador=contador-1;
+    }  //cierre IF value1
+  }  //cierre del ELSE-IF1
+}  //cierre del RECTANGULO4
+//RECTANGULO 5//
+void rectangulo5(int x5,int y5,int a5,int b5){
+  if(contador<2){
+ if(value5==#CDDEF2){
+ value5=0;
+ventana=ventana+1;
+ rect(x5,y5,a5,b5);
+ contador=contador+1;
+ print("Se le suma 1");
+ }//cierre del IF
+ else{
+ value5=#CDDEF2;
+ventana=ventana-1;
+ contador=contador-1;
+ print("Se le resta 1");
+   }  //cierre del ELSE
+  } //cierre del IF CONTADOR
+  else if(contador==2){
+  if(value5==0){
+    value5=#CDDEF2;
+    ventana=ventana-1;
+    contador=contador-1;
+    }  //cierre IF value1
+  }  //cierre del ELSE-IF1
+}  //cierre del RECTANGULO5
+//RECTANGULO 6 //
+void rectangulo6(int x6,int y6,int a6,int b6){
+  if(contador<2){
+ if(value6==#F58A8A){
+ value6=0;
+ventana=ventana+1;
+ rect(x6,y6,a6,b6);
+ contador=contador+1;
+ print("Se le suma 1");
+ }//cierre del IF
+ else{
+ value6=#F58A8A;
+ ventana=ventana-1;
+ contador=contador-1;
+ print("Se le resta 1");
+   }  //cierre del ELSE
+  } //cierre del IF CONTADOR
+  else if(contador==2){
+  if(value6==0){
+    value6=#F58A8A;
+  ventana=ventana-1;
+    contador=contador-1;
+    }  //cierre IF value1
+  }  //cierre del ELSE-IF1
+}  //cierre del RECTANGULO6
+
+
+void pantalla(){
+  if (l==1){
+   background(0);
+  String nombre="Little Monster";
+  fill(255);
+    textSize(60);
+    text(nombre,300,200,600,100);
+    
+     String des="Los pequeños monstruos de este juego luchan por conseguir dulces magicos.";
+  fill(255);
+    textSize(20);
+    text(des,250,430,600,100);
+    
+     String instrucciones="Si deseas ayudarlos, da clic en la pantalla y presiona la tecla D dos veces, para comenzar el juego.";
+  fill(255);
+    textSize(20);
+    text(instrucciones,250,510,600,100);
+    
+  translate(width/2, height/2);
+    for (int i=0; i<stars.length; i++){
+    stars[i]. update();
+    stars[i]. show();
+  }
+  
+  } //cierre del FOR
+}
+
+
+void CAMI(){
+   fill(#FACCCC);
+  noStroke();
+  ellipse (150,120,150,150); //cuerpo 1
+  
+  fill(#FFFCFC);
+  noStroke();
+  ellipse (120,100,45,45);  //ojo izquierdo 1
+  ellipse(180,100,45,45);  //ojo derecho 1
+  
+  fill(#30AA8A);
+  ellipse (120,100,30,30);  //ojo izquierdo 2
+  ellipse(180,100,30,30);  //ojo derecho 2
+  
+   fill(#FFFCFC);
+  ellipse (120,90,10,10);  //ojo izquierdo 3
+  ellipse(180,90,10,10);  //ojo derecho 3
+  
+  fill(#FCDBDB);
+  ellipse(115,190,60,20 ); //patita izq1
+  
+   fill(#FCDBDB);
+  ellipse(185,190,60,20 ); //patita der1
+  
+  //orejas 
+ fill(#FFD3D9);
+ ellipse(200,40,40,60);
+ ellipse(95,40,40,60);
+ 
+//orejas2
+fill(#FCE5E5);
+ ellipse(210,40,15,50);
+ ellipse(100,40,15,50);
+ 
+  //Boquita1
+  fill(#FF4047);
+  arc(150, 135, 20, 20, 0, PI,CHORD);
+  
+  //Manos
+  
+  fill(#FCDBDB);
+  ellipse(105,150,40,20);
+ellipse(200,150,40,20);
+}
+
+void YELL (){
+fill(#FDFF95);
+ noStroke();
+  ellipse (500,120,150,150); //cuerpo 2
+  
+  // ojos
+  fill(#000000);
+  ellipse(470,100,20,30);
+   ellipse(530,100,20,30);
+   
+    fill(#FFFCFC);
+  ellipse (470,90,10,10);  //ojo izquierdo 3
+  ellipse(530,90,10,10);  //ojo derecho 3
+  
+  //Naríz
+  fill(#000000);
+  ellipse(500,120,10,10);
+  
+ fill(#FFFFB7);
+  ellipse(465,190,60,20 ); //patita izq2
+  
+   fill(#FFFFB7);
+  ellipse(535,190,60,20 ); //patita der2
+ 
+ //orejas2
+fill(#FEFFC9);
+ ellipse(550,45,40,60);
+ ellipse(450,45,40,60);
+  
+  //Boquita2
+  fill(#FF4047);
+  arc(500, 135, 40, 30, 0, PI,CHORD);
+  
+   //Manos
+  
+  fill(#FFFFB7);
+  ellipse(445,150,40,20);
+ellipse(555,150,40,20);
+}
+
+void BLUU () {
+fill(#CCF5FA);
+  noStroke();
+  ellipse (850,120,150,150); //cuerpo 3
+  
+  //noStroke();
+  fill(#FFFCFC);
+  ellipse (820,100,45,60);  //ojo izquierdo 1
+  ellipse(880,100,45,60);  //ojo derecho 1
+  
+  fill(#9235AF);
+  ellipse (820,100,30,30);  //ojo izquierdo 2
+  ellipse(880,100,30,30);  //ojo derecho 2
+  
+   fill(#FFFCFC);
+  ellipse (820,90,10,10);  //ojo izquierdo 3
+  ellipse(880,90,10,10);  //ojo derecho 3
+
+ fill(#E3FFFB);
+  ellipse(815,190,60,20 ); //patita izq3
+  
+   fill(#E3FFFB);
+  ellipse(885,190,60,20 ); //patita der3
+  
+  //orejitas
+   fill(#D3FFFB);
+ arc(900, 60, 40, 40, 3, 6.42,CHORD);
+ arc(800, 60, 40, 40, 3, 6.42,CHORD);
+ 
+  //Boquita3
+   fill(#FF4047);
+  arc(850, 135, 30, 40, 0, PI,CHORD);
+  
+  //Dientes 
+  
+  fill(255);
+  rect(842,135, 5,8);
+  
+   fill(255);
+  rect(855,135, 5,8);
+
+  //MANOS
+    fill(#E3FFFB);
+  ellipse(805,150,40,20);
+ellipse(895,150,40,20);
+
+
+}
+
+void PURP(){
+  fill(#E6B1FA);
+  noStroke();
+  ellipse (150,500,150,150); //cuerpo 4
+  
+  
+  fill(#FFFCFC);
+  noStroke();
+ // ellipse (120,100,45,45);  //ojo izquierdo 1
+  //ellipse(180,100,45,45);  //ojo derecho 1
+  
+  fill(#000000);
+  ellipse (120,480,30,30);  //ojo izquierdo 2
+  ellipse(180,480,30,30);  //ojo derecho 2
+  
+   fill(#FFFCFC);
+  ellipse (120,470,10,10);  //ojo izquierdo 3
+  ellipse(180,470,10,10);  //ojo derecho 3
+  
+  //Naríz
+  fill(#000000);
+  ellipse(150,500,10,10);
+  
+  fill(#EFC4FF);
+  ellipse(105,570,60,40 ); //patita izq1
+  
+   fill(#EFC4FF);
+  ellipse(195,570,60,40 ); //patita der1
+  
+  //orejas 
+ fill(#EFC4FF);
+ ellipse(105,420,60,60);
+ ellipse(195,420,60,60);
+ 
+//orejas2
+fill(#FCE5E5);
+ ellipse(95,420,15,50);
+ ellipse(205,420,15,50);
+ 
+  //Boquita1
+  fill(#FF4047);
+  arc(150, 520, 40, 10, 0, PI,CHORD);
+  
+  //Manos
+  
+  fill(#EFC4FF);
+  ellipse(85,520,40,20);
+ellipse(215,520,40,20);
+
+}
+
+void BOB (){
+  fill(#C9D8C5);
+  noStroke();
+  ellipse (500,500,150,150); //cuerpo 5
+  
+  fill(#000000);
+  ellipse (470,480,30,15);  //ojo izquierdo 2
+  ellipse(530,480,30,15);  //ojo derecho 2
+  
+   fill(#FFFCFC);
+  ellipse (470,478,5,5);  //ojo izquierdo 3
+  ellipse(530,478,5,5);  //ojo derecho 3
+  
+    //orejas 
+ fill(#DCF0D7);
+ ellipse(550,430,40,80);
+ ellipse(450,430,40,80);
+  
+   //Naríz
+   
+    fill(#F56065);
+  ellipse(500,500,10,10);
+  
+   
+  //boca
+  fill(#F56065);
+  rect(480,520, 40,3);
+  
+  //Dientes 
+   fill(255);
+  rect(490,523, 8,8);
+  
+   fill(255);
+  rect(500,523, 8,8);
+  
+ //mejillas
+  fill(#F56065);
+  ellipse(455,503,20,20);
+ellipse(545,503,20,20);
+ 
+ //manitas 
+ fill(#DCF0D7);
+   ellipse(430,520,30,20);
+ellipse(575,520,30,20);
+  //patitas
+   fill(#DCF0D7);
+   
+  ellipse(465,575,60,15 ); //patita izq2
+  ellipse(535,575,60,15 ); //patita der2
+
+}
+
+void SAM(){
+ fill(#FFE8A7);
+  noStroke();
+  ellipse (850,500,150,150); //cuerpo 6
+  
+  //ojitos t
+    //noStroke();
+  fill(#FFFCFC);
+  ellipse (820,485,45,60);  //ojo izquierdo 1
+  ellipse(880,485,45,60);  //ojo derecho 1
+  
+  fill(#9235AF);
+  ellipse (820,485,45,50);  //ojo izquierdo 2
+  ellipse(880,485,45,50);  //ojo derecho 2
+  
+  fill(0);
+  ellipse (820,485,30,35);  //ojo izquierdo 3
+  ellipse(880,485,30,35);  //ojo derecho 3
+  
+   fill(#FFFCFC);
+  ellipse (820,485,10,10);  //ojo izquierdo 4
+  ellipse(880,485,10,10);  //ojo derecho 4
+ 
+  
+  //orejitas
+  fill(#FFEFC1);
+  noStroke();
+  ellipse (815,430,45,45);  //ojo izquierdo 1
+  ellipse(885,430,45,45);  //ojo derecho 1
+
+ 
+  //Boquita3
+   fill(#FF4047);
+  arc(850, 520, 30, 40, 0, PI,CHORD);
+  
+  //Dientes 
+  
+  fill(255);
+  noStroke();
+  rect(842,135, 5,8);
+  
+   fill(255);
+  rect(855,135, 5,8);
+  
+     //Naríz
+ 
+    fill(#F56065);
+  ellipse(850,510,10,10);
+
+  //MANOS
+    fill(#FFEFC1);
+  ellipse(785,500,40,20);
+ellipse(915,500,40,20);
+
+//patitas 
+   fill(#FFEFC1);
+  ellipse(815,570,60,20 ); //patita izq3
+  
+   fill(#FFEFC1);
+  ellipse(885,570,60,20 ); //patita der3
+}
